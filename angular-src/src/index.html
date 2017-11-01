@@ -13,3 +13,725 @@
   <app-root>Loading...</app-root>
 </body>
 </html>
+
+
+<!-- BLOG PAGE CSS -> GOES TO DASHBOARD.COMPONENT.HTML (CURRENTLY NOT WORKING) -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+    <title>Choredash</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+
+            <link rel="stylesheet" href="css/layouts/blog.css">
+
+</head>
+<body>
+
+<style>
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#layout {
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.sidebar {
+    background: rgb(61, 79, 93);
+    color: #fff;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+    .post-category-design {
+        background: #5aba59;
+    }
+    .post-category-pure {
+        background: #4d85d1;
+    }
+    .post-category-yui {
+        background: #8156a7;
+    }
+    .post-category-js {
+        background: #df2d4f;
+    }
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.footer {
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+</style>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">Choredash</h1>
+            <h2 class="brand-tagline">Post and view jobs around campus</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://purecss.io">Post a job</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="http://yuilibrary.com">View my jobs</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+
+            <div class="posts">
+                <h1 class="content-subhead">Available jobs</h1>
+
+
+                <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Jimmy Nguyen&#x27;s avatar" class="post-avatar" src="img/common/tilo-avatar.png">
+
+                        <h2 class="post-title">Chores...</h2>
+
+                        <p class="post-meta">
+                            By <a href="#" class="post-author">Jimmy Nguyen</a> under <a class="post-category post-category-design" href="#">Laundry</a> <a class="post-category post-category-pure" href="#">Cleaning</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            Complete these <a href="https://speakerdeck.com/tilomitra/pure-bliss">tasks</a>. I'm too lazy to do them myself.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="posts">
+                <h1 class="content-subhead"></h1>
+
+                <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Grant Lin&#x27;s avatar" class="post-avatar" src="img/common/ericf-avatar.png">
+
+                        <h2 class="post-title">Everything You Need to Know About Grant</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Grant Lin</a> under <a class="post-category post-category-js" href="#">Drugs</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            Hook me up with some weed bruhhhhhh
+                        </p>
+                    </div>
+                </section>
+
+                <h1 class="content-subhead"></h1>
+
+                <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Reid Burke&#x27;s avatar" class="post-avatar" src="img/common/reid-avatar.png">
+
+                        <h2 class="post-title">Photos from CSSConf and JSConf</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Reid Burke</a> under <a class="post-category" href="#">Uncategorized</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1 pure-u-md-1-2">
+                                <a href="http://www.flickr.com/photos/uberlife/8915936174/">
+                                    <img alt="Photo of someone working poolside at a resort"
+                                         class="pure-img-responsive"
+                                         src="http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg">
+                                </a>
+
+                                <div class="post-image-meta">
+                                    <h3>CSSConf Photos</h3>
+                                </div>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-2">
+                                <a href="http://www.flickr.com/photos/uberlife/8907351301/">
+                                    <img alt="Photo of the sunset on the beach"
+                                         class="pure-img-responsive"
+                                         src="http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg">
+                                </a>
+
+                                <div class="post-image-meta">
+                                    <h3>JSConf Photos</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 class="content-subhead"></h1>
+
+                <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Andrew Wooldridge&#x27;s avatar" class="post-avatar" src="img/common/andrew-avatar.png">
+
+                        <h2 class="post-title">YUI 3.10.2 Released</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Andrew Wooldridge</a> under <a class="post-category post-category-yui" href="#">YUI</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            We are happy to announce the release of YUI 3.10.2! You can find it now on the Yahoo! CDN, download it directly, or pull it in via npm. We’ve also updated the YUI Library website with the latest documentation.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
+                        <li class="pure-menu-item"><a href="http://twitter.com/yuilibrary/" class="pure-menu-link">Twitter</a></li>
+                        <li class="pure-menu-item"><a href="http://github.com/yahoo/pure/" class="pure-menu-link">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html> -->
+
+
+<!-- HOMEPAGE CSS -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <title>Choredash</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+            <link rel="stylesheet" href="css/layouts/marketing.css">
+</head>
+<body>
+
+<style>
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.l-box {
+    padding: 1em;
+}
+
+.l-box-lrg {
+    padding: 2em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.is-center {
+    text-align: center;
+}
+
+.pure-form label {
+    margin: 1em 0 0;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+a.pure-button-primary {
+    background: white;
+    color: #1f8dd6;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.home-menu {
+    background: #2d3e50;
+}
+.pure-menu.pure-menu-fixed {
+    border-bottom: none;
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.home-menu a {
+    color: #6FBEF3;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
+
+.splash-container {
+    background: #1f8dd6;
+    z-index: 1;
+    overflow: hidden;
+
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+.splash-subhead {
+    color: white;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+.content-wrapper {
+
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
+
+.content {
+    padding: 1em 1em 3em;
+}
+
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+
+.content-head-ribbon {
+    color: white;
+}
+
+.content-subhead {
+    color: #1f8dd6;
+}
+    .content-subhead i {
+        margin-right: 7px;
+    }
+
+.ribbon {
+    background: #2d3e50;
+    color: #aaa;
+}
+
+.footer {
+    background: #111;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: 48em) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+        }
+
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+
+    .l-box-lrg {
+        border: none;
+    }
+
+}
+
+@media (min-width: 78em) {
+    .splash-head {
+        font-size: 300%;
+    }
+}
+
+</style>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="/">Choredash</a>
+
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item"><a href="/login" class="pure-menu-link">Login</a></li>
+          <li class="pure-menu-item"><a href="/register" class="pure-menu-link">Register</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">Choredash</h1>
+        <p class="splash-subhead">
+            Find jobs on campus posted by other students
+        </p>
+        <p>
+            <a href="/login" class="pure-button pure-button-primary">Get Started</a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                <h3 class="content-subhead">
+                    <i class="fa fa-rocket"></i>
+                    Get Started Quickly
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-mobile"></i>
+                    Responsive Layouts
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-th-large"></i>
+                    Modular
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-check-square-o"></i>
+                    Plays Nice
+                </h3>
+                <p>
+                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+            <img width="300" alt="File Icons" class="pure-img-responsive" src="img/common/file-icons.png">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+
+            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+
+                        <label for="name">Your Name</label>
+                        <input id="name" type="text" placeholder="Your Name">
+
+
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" placeholder="Your Email">
+
+                        <label for="password">Your Password</label>
+                        <input id="password" type="password" placeholder="Your Password">
+
+                        <button type="submit" class="pure-button">Sign Up</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4>Contact Us</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                </p>
+
+                <h4>More Information</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer l-box is-center">
+        View the source of this layout to learn more. Made with love by the YUI Team.
+    </div>
+
+</div>
+</body>
+</html> -->

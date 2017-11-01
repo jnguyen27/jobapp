@@ -1,7 +1,118 @@
-<div *ngIf="user">
+<!-- <div *ngIf="user">
   <h2 class="page-header">{{user.name}}</h2>
   <ul class="list-group">
     <li class="list-group-item">Username: {{user.username}}</li>
     <li class="list-group-item">Email: {{user.email}}</li>
   </ul>
+</div> -->
+
+<!--
+contact form created for treehouse competition.
+-->
+
+<!-- <form id="contact">
+  <div class="container">
+    <div class="head">
+      <h2>Post a job</h2>
+    </div>
+    <input type="text" name="date" placeholder="Job date (MM/DD/YY)" /><br />
+    <input type="text" name="time" placeholder="Job time" /><br />
+    <input type="text" name="location" placeholder="Job location" /><br />
+    <textarea type="text" name="message" placeholder="Details of job..."></textarea><br />
+    <div class="message">Message Sent</div>
+    <button id="submit" type="submit">
+      Post job!
+    </button>
+  </div>
+</form>
+
+-->
+
+<!-- BUTTON TO POST -> INCLUDES CSS
+
+<div id="post">Post a job!</div>
+
+<div id="postForm">
+
+  <h1>Keep in touch!</h1>
+  <small>I'll get back to you as quickly as possible</small>
+
+  <form action="#">
+    <input placeholder="Job location" type="text" required />
+    <input placeholder="Job date (MM/DD/YY)" type="email" required />
+    <input placeholder="Job time" type="text" required />
+    <textarea placeholder="Details of job..."></textarea>
+    <input class="formBtn" type="submit" />
+    <input class="formBtn" type="reset" />
+  </form>
 </div>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+
+}
+
+textarea { height: 80px; resize: none; }
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+<h3>Post a job!</h3>
+
+<div>
+  <form action="/action_page.php">
+    <label for="joblocation">Job location</label>
+    <input type="text" id="joblocation" name="location" placeholder="Address" required>
+
+    <label for="jobdate">Job date</label>
+    <input type="text" id="jobdate" name="date" placeholder="MM/DD/YY" requried>
+
+    <label for="jobtime">Job time</label>
+    <input type="text" id="jobtime" name="time" placeholder="12:00 PM PST" required>
+
+    <label for="jobdetails">Job details</label>
+    <input type="text" id="jobdetails" name="details" placeholder="What needs to be done..." reqiored>
+
+    <!-- <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select> -->
+
+    <input type="submit" value="Post">
+  </form>
+</div>
+
+</body>
+</html>
